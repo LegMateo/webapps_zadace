@@ -1,1 +1,56 @@
-let a = 0 
+// ZADATAK 2
+let a = 0
+
+let converter = (valuta) => a = valuta / 7.5
+
+
+let kolicina = 750
+console.log(kolicina)
+
+let rez = converter(kolicina)
+console.log(kolicina, "kuna je",rez,"eura")
+
+//ZADATAK 3
+
+let list = [100,150000]
+let broj = 20
+
+let provjera = (broj) =>{
+    if(broj!=list){
+        return console.log(broj, "->", broj, "nije unutar [100,150000]");
+    }
+}
+
+
+let rez1 = provjera (broj)
+
+// ZADATAK 4
+
+let x = 61
+
+let satUmin = (broj) =>{
+    let sati = Math.round( x/60 );
+    let min = x - (sati*60);
+
+return console.log(x, "->","Ovo je",sati,"sata","i",min,"minuta");
+}
+
+let rez3 = satUmin(x)
+
+// ZADATAK 5
+
+let polje_br = [1,2,3,4,5,6,7,8,9,10]
+
+let dijeljivi_s_tri = (arr) =>{
+    let temp = []
+    for(let i of arr){
+        if(i%3==0){
+            temp.push(i)
+        }
+    }
+
+    return console.log(arr, "->","brojevi dijeljivi s 3",temp);
+}
+
+let rez4 = dijeljivi_s_tri(polje_br)
+
