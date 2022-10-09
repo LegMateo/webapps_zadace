@@ -52,5 +52,6 @@ let dijeljivi_s_tri = (arr) =>{
     return console.log(arr, "->","brojevi dijeljivi s 3",temp);
 }
 
+
 let rez4 = dijeljivi_s_tri(polje_br)
 
