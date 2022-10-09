@@ -12,13 +12,19 @@ console.log(kolicina, "kuna je",rez,"eura")
 
 //ZADATAK 3
 
-let list = [100,150000]
-let broj = 20
+let list = [];
+for (var i = 100; i<=150000; i++){
+list.push(i);}
+//console.log(list)
+let broj = 155000
 
 let provjera = (broj) =>{
-    if(broj!=list){
+    for (s of list){
+    if(broj<list[0] || broj>list[150000]){
         return console.log(broj, "->", broj, "nije unutar [100,150000]");
     }
+    else return console.log(broj, "->", broj, "je unutar [100,150000]");
+}
 }
 
 
@@ -54,4 +60,53 @@ let dijeljivi_s_tri = (arr) =>{
 
 
 let rez4 = dijeljivi_s_tri(polje_br)
+
+//ZADATAK 6
+
+
+
+String.prototype.toCamelCase = function (string) {
+    return string 
+        .replace(/\s(.)/g, function($1) {return $1.toUpperCase();})
+        .replace(/\s/g, '')
+        .replace(/^(.)/,function($1){return $1.toLowerCase();});
+}
+
+let rez5 = String.prototype.toCamelCase("web apps vjezbe")
+console.log(rez5)
+
+//ZADATAK 7
+
+let lista = [];
+for (var i = 0; i<=100; i++){
+lista.push(i);}
+let br = 23
+let vskr = 7
+let rezic = 0
+let reziccvaja = 1
+let visekratnik = (br) =>{
+    for (s of lista){
+        if(br<lista[0] || br>lista[100]){
+            return console.log(br, "->", br, "nije unutar [0,100]");
+        }
+        else {
+
+          
+                while(vskr<br){
+                    vskr = vskr + 7
+                    rezic++
+                    reziccvaja = reziccvaja * (rezic * 7)
+                }
+
+                
+            
+            return console.log(br, "->", br, "je unutar [0,100]"),
+            console.log(br, "-> ",reziccvaja);
+            
+        }
+    }
+
+}
+
+let rez6 = visekratnik(br)
 
