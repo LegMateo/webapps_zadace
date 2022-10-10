@@ -5,9 +5,10 @@ let converter = (valuta) => a = valuta / 7.5
 
 
 let kolicina = 750
-console.log(kolicina)
+//console.log(kolicina)
 
 let rez = converter(kolicina)
+console.log("Zadatak 2")
 console.log(kolicina, "kuna je",rez,"eura")
 
 //ZADATAK 3
@@ -21,9 +22,9 @@ let broj = 155000
 let provjera = (broj) =>{
     for (s of list){
     if(broj<list[0] || broj>list[150000]){
-        return console.log(broj, "->", broj, "nije unutar [100,150000]");
+        return console.log("Zadatak 3"),console.log(broj, "->", broj, "nije unutar [100,150000]");
     }
-    else return console.log(broj, "->", broj, "je unutar [100,150000]");
+    else return console.log("Zadatak 3"),console.log(broj, "->", broj, "je unutar [100,150000]");
 }
 }
 
@@ -38,7 +39,7 @@ let satUmin = (broj) =>{
     let sati = Math.round( x/60 );
     let min = x - (sati*60);
 
-return console.log(x, "->","Ovo je",sati,"sata","i",min,"minuta");
+return console.log("Zadatak 4"),console.log(x, "->","Ovo je",sati,"sata","i",min,"minuta");
 }
 
 let rez3 = satUmin(x)
@@ -55,7 +56,7 @@ let dijeljivi_s_tri = (arr) =>{
         }
     }
 
-    return console.log(arr, "->","brojevi dijeljivi s 3",temp);
+    return console.log("Zadatak 5"),console.log(arr, "->","brojevi dijeljivi s 3",temp);
 }
 
 
@@ -73,7 +74,8 @@ String.prototype.toCamelCase = function (string) {
 }
 
 let rez5 = String.prototype.toCamelCase("web apps vjezbe")
-console.log(rez5)
+console.log("Zadatak 6")
+console.log("web apps vjezbe","->",rez5)
 
 //ZADATAK 7
 
@@ -82,25 +84,25 @@ for (var i = 0; i<=100; i++){
 lista.push(i);}
 let br = 23
 let vskr = 7
-let rezic = 0
+let brojac = 0
 let reziccvaja = 1
 let visekratnik = (br) =>{
     for (s of lista){
         if(br<lista[0] || br>lista[100]){
-            return console.log(br, "->", br, "nije unutar [0,100]");
+            return console.log("Zadatak 7"),console.log(br, "->", br, "nije unutar [0,100]");
         }
         else {
 
           
                 while(vskr<br){
                     vskr = vskr + 7
-                    rezic++
-                    reziccvaja = reziccvaja * (rezic * 7)
+                    brojac++
+                    reziccvaja = reziccvaja * (brojac * 7)
                 }
 
                 
             
-            return console.log(br, "->", br, "je unutar [0,100]"),
+            return console.log("Zadatak 7"),console.log(br, "->", br, "je unutar [0,100]"),
             console.log(br, "-> ",reziccvaja);
             
         }
@@ -110,3 +112,40 @@ let visekratnik = (br) =>{
 
 let rez6 = visekratnik(br)
 
+//ZADATAK 8
+
+let listaa = [3,4,5,6]
+
+let obrni = (arr) => temp = arr.reverse();
+
+let rez7 = obrni(listaa)
+console.log("Zadatak 8")
+console.log(listaa,"->",rez7)
+
+//ZADATAK 9
+
+let obj1 = {
+    a:1,
+    b:2,
+    c:3
+}
+
+let obj2 = {
+    a:1,
+    b:2,
+    c:3
+}
+
+//console.log(Object.keys(obj2))
+//console.log(Object.keys(obj1))
+
+let key = (li,la) => {
+    let liKey = Object.keys(li).sort();
+    let laKey = Object.keys(la).sort();
+    return JSON.stringify(liKey) === JSON.stringify(laKey); 
+
+}
+
+let rez8 = key(obj1,obj2)
+console.log("Zadatak 9")
+console.log(obj1,obj2,"->",rez8)
