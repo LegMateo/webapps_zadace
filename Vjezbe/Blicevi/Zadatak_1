@@ -1,0 +1,49 @@
+// Funkcije koja prima listu objekata i vraća objekt samo s jednim ključem
+
+let arrobj = [{ 1: "A", 2: "B" }, { 1: "A", 2: "B" }, { 1: "C" }];
+
+let fun = (arr) => {
+  let key = 0;
+  //let rez= 0;
+  for (i in arr) {
+    key = Object.keys(arr[i]).length;
+    if (key == 1) return arr[i];
+    else continue;
+  }
+  /* let key = Object.keys(i).length;
+    if (key == 1) {
+      rez = arr[i];
+      return rez;
+    } else continue;
+  }
+
+  return rez;*/
+};
+
+let rez = fun(arrobj);
+console.log(rez);
+
+//Object.keys(obj).length;
+
+/*
+
+const mobiles = [
+  {
+    brand: "Samsung",
+    model: "Galaxy Note 9",
+  },
+  {
+    brand: "Google",
+    model: "Pixel 3",
+  },
+  {
+    brand: "Apple",
+    model: "iPhone X",
+  },
+];
+
+mobiles.forEach((mobile) => {
+  for (let key in mobile) {
+    console.log(`${key}: ${mobile[key]}`);
+  }
+});*/
